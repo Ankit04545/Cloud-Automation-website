@@ -51,7 +51,7 @@ Resources:
         Statement:
           - Effect: Allow
             Principal:
-              Service: ://cloudfront.amazonaws.com
+              Service: cloudfront.amazonaws.com
             Action: s3:GetObject
             Resource: !Sub "${WebBucket.Arn}/*"
             Condition:
