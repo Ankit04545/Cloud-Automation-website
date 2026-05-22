@@ -63,3 +63,6 @@ Outputs:
     Value: !Ref WebBucket
   DistributionId:
     Value: !Ref CloudFrontDistribution
+  WebsiteURL:
+    Description: The live URL for the CloudFront distribution
+    Value: !Sub "https://${CloudFrontDistribution.DomainName}"
