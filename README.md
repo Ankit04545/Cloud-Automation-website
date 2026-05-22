@@ -16,7 +16,7 @@ This project contains a static website hosted securely on AWS, provisioned using
 
 ### Diagram
 
-![Cloud Architecture](images/Cloud Architecture .drawio.png)
+![Cloud Architecture](images/Cloud%20Architecture%20.drawio.png)
 
 ### Component Description
 
