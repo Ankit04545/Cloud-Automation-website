@@ -89,7 +89,7 @@ To update your website content and trigger the live deployment pipeline, run the
 
 Once the GitHub Actions deployment completes successfully, follow these steps to find your live website link:
 
-1. Log in to the [AWS Management Console](https://console.aws.amazon.com)as an IAM user.
+1. Log in to the [AWS Management Console](https://console.aws.amazon.com) as an IAM user.
 2. Search for and navigate to the **CloudFormation** service page.
 3. Click on the stack named **my-automated-website-stack**.
 4. Select the **Outputs** tab in the stack details panel.
