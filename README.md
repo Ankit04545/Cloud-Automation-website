@@ -1,7 +1,7 @@
 Automated AWS Website Deployment
 =================================
 
-This project contains a static website hosted securely on AWS, provisioned using Infrastructure as Code (IaC) via AWS CloudFormation, and continuously deployed via a GitHub Actions(CI/CD Pipeline).
+This project contains a static website hosted securely on AWS, provisioned using Infrastructure as Code (IaC) via AWS CloudFormation, and continuously deployed via GitHub Actions(CI/CD Pipeline).
 
 📁 Repository Structure
 -----------------------
@@ -16,7 +16,7 @@ This project contains a static website hosted securely on AWS, provisioned using
 
 ### Diagram
 
-![Cloud Architecture](images/Cloud-Architecture.drawio.png)
+![Cloud Architecture](images/Cloud Architecture .drawio.png)
 
 ### Component Description
 
