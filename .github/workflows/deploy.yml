@@ -1,0 +1,35 @@
+name: Deploy CloudFormation Stack & Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Deploy CloudFormation Stack
+        id: cfn-deploy
+        uses: aws-actions/aws-cloudformation-github-deploy@v1
+        with:
+          name: my-automated-website-stack
+          template: cloudformation/template.yaml
+          no-fail-on-empty-changeset: "1"
+
+      - name: Sync Website Assets & Invalidate Cache
+        run: |
+          BUCKET_NAME=${{ steps.cfn-deploy.outputs.BucketName }}
+          DIST_ID=${{ steps.cfn-deploy.outputs.DistributionId }}
+          aws s3 sync ./src s3://$BUCKET_NAME --delete
+          aws cloudfront create-invalidation --distribution-id $DIST_ID --paths "/*"
