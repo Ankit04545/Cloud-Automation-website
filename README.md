@@ -1,7 +1,7 @@
 # Automated AWS Website Deployment
 
 [![AWS](https://img.shields.io/badge/AWS-CloudFormation%20%7C%20S3%20%7C%20CloudFront-orange?logo=amazonaws)](https://aws.amazon.com)
-[![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-blue?logo=githubactions)](https://github.com/Ankit04545/Cloud-Automation-website.git)
+[![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-blue?logo=githubactions)](https://github.com/Ankit04545/Cloud-Automation-website/actions)
 [![IaC](https://img.shields.io/badge/IaC-CloudFormation-yellow)](https://aws.amazon.com/cloudformation)
 [![Status](https://img.shields.io/badge/Deployment-Live-brightgreen)](https://d2pw4mt3oclkf9.cloudfront.net/)
 
@@ -97,7 +97,6 @@ Add the following secrets to your GitHub repository under **Settings → Secrets
 |---|---|
 | `AWS_ACCESS_KEY_ID` | Your AWS IAM access key |
 | `AWS_SECRET_ACCESS_KEY` | Your AWS IAM secret access key |
-| `AWS_REGION` | AWS region (e.g. `us-east-1`) |
 
 ---
 
@@ -164,8 +163,9 @@ git push origin main
 
 ### Step 1 — Fork and Clone
 ```bash
-git clone https://github.com/yourusername/aws-website-deployment
-cd aws-website-deployment
+git clone https://github.com/Ankit04545/Cloud-Automation-website
+cd Cloud-Automation-website
+
 ```
 
 ### Step 2 — Configure GitHub Secrets
@@ -175,7 +175,6 @@ Go to your GitHub repo → **Settings → Secrets and variables → Actions** an
 |---|---|
 | `AWS_ACCESS_KEY_ID` | Your IAM access key |
 | `AWS_SECRET_ACCESS_KEY` | Your IAM secret key |
-| `AWS_REGION` | e.g. `us-east-1` |
 
 ### Step 3 — Push to Deploy
 ```bash
