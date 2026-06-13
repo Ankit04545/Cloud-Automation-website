@@ -31,7 +31,7 @@ Most beginner AWS projects use the console manually — which doesn't reflect re
 │   └── template.yaml         # AWS Infrastructure as Code template
 ├── images/
 │   └── Cloud Architecture.drawio.png  # Architecture diagram
-├── screenshots/              # Proof of deployment (AWS console screenshots)
+├── Screenshots/              # Proof of deployment (AWS console screenshots)
 └── src/
     └── index.html            # Website source files
 ```
