@@ -187,7 +187,7 @@ GitHub Actions will automatically provision all infrastructure and deploy the we
 ### Step 4 — Find Your Live URL
 - Go to **AWS Console → CloudFormation → my-automated-website-stack → Outputs**
 - Click the **WebsiteURL** value to open your live site
-
+![CloudFormation Outputs](Screenshots/cloudformation-outputs.png)
 ---
 
 ## ⚠️ Challenges Faced
